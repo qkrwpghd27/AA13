@@ -46,7 +46,7 @@ parser.on('data', (data) => { // call back when data is received
      mdata[0]=dStr;  //date
      mdata[1]=temp;  //data
      mdata[2]=lux;
-     console.log('AA00,' + mdata.toString());
+     console.log('AA13,' + mdata.toString());
      io.sockets.emit('message', mdata);  // send data to all clients  
    }
    else{

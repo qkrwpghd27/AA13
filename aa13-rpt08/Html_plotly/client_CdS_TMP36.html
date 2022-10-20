@@ -111,7 +111,7 @@
           }
       }
   }, {
-    x : xArray,
+    x : tArray,
     y : yTrack,
     name : 'luminosity',
     xaxis: 'x2',
@@ -149,7 +149,7 @@
     yaxis2 : {
         title : 'luminosity (lux)',
         domain : [0.65,1],
-        range : [0, 500]
+        Autorange : true 
     }
 };
 
@@ -168,26 +168,23 @@
         minorTicks  : 10,
         strokeTicks : false,
         highlights  : [
-        { from : -30,   to : -20, color : 'rgba(0, 0, 255, 1)' },
-        { from : -20,   to : -10, color : 'rgba(0, 0, 255, .5)' },
-        { from : -10, to : 0, color : 'rgba(0, 0, 255, .25)' },
-        { from : 0,   to : 10, color : 'rgba(0, 255, 0, .1)' },
-        { from : 10, to : 20, color : 'rgba(0, 255, 0, .25)' },
-        { from : 20, to : 30, color : 'rgba(255, 0,  0, .25)' },
-        { from : 30, to : 40, color : 'rgba(255, 0,  0, .5)' },
-        { from : 40, to : 50, color : 'rgba(255, 0,  0, 1)' }
+            { from : 0,   to : 100, color : '#aaa' },
+            { from : 100, to : 200, color : '#ccc' },
+            { from : 200, to : 300, color : '#ddd' },
+            { from : 300, to : 400, color : '#eee' },
+            { from : 400, to : 500, color : '#fff' }
         ],
         colors      : {
-            plate      : '#fff',
-            majorTicks : '#000',
-            minorTicks : '#444',
-            title      : '#000',
-            units      : '#f00',
-            numbers    : '#777',
-            needle     : { start : 'rgba(240, 128, 128, 1)', 
-            end : 'rgba(255, 160, 122, .9)' }
+            plate      : '#bbb',
+            majorTicks : '#ddd',
+            minorTicks : '#aaa',
+            title      : '#fff',
+            units      : '#ccc',
+            numbers    : '#eee',
+            needle     : { start : 'rgba(240, 128, 128, 1)', end : 'rgba(255, 160, 122, .9)' }
         }
     });
+
     gauge_temp.draw();
 
     var gauge_lux = new Gauge({
@@ -204,15 +201,15 @@
         minorTicks  : 10,
         strokeTicks : false,
         highlights  : [
-        { from : 0,   to : 100, color : '#aaa' },
-        { from : 100, to : 200, color : '#ccc' },
-        { from : 200, to : 300, color : '#ddd' },
-        { from : 300, to : 400, color : '#eee' },
-        { from : 400, to : 500, color : '#fff' }
+        { from : 0,   to : 100, color : '#F42707' },
+        { from : 100, to : 200, color : '#F8482E' },
+        { from : 200, to : 300, color : '#F8705B' },
+        { from : 300, to : 400, color : '#F4A599' },
+        { from : 400, to : 500, color : '#F4D4CF' }
         ],
         colors      : {
-            plate      : '#1f77b4',
-            majorTicks : '#f5f5f5',
+            plate      : '#9E9044',
+            majorTicks : '#f3F3F3',
             minorTicks : '#aaa',
             title      : '#fff',
             units      : '#ccc',
