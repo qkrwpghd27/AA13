@@ -7,7 +7,7 @@ mongoose.connect("mongodb://localhost/test2", {
 
 var SensorSchema = new mongoose.Schema({
   data: String,
-  created: Date,
+  created: String,
 });
 
 // data model
